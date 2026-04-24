@@ -1,5 +1,7 @@
 const neo4j = require("neo4j-driver");
+
 let driver;
+
 function connectNeo4j() {
   driver = neo4j.driver(
     process.env.NEO4J_URI,
@@ -7,6 +9,7 @@ function connectNeo4j() {
   );
   console.log("Neo4j connected");
 }
+
 function getDriver() {
   if (!driver) throw new Error("Neo4j not connected");
   return driver;

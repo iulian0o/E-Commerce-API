@@ -1,6 +1,5 @@
 const { getDb } = require("../config/mongo");
 const { ObjectId } = require("mongodb");
-const { recordPurchaseInGraph } = require("./recommendationService");
 
 // Place a new order — writes to MongoDB + updates Neo4j graph
 async function createOrder(userId, items) {
