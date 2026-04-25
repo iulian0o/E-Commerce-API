@@ -4,6 +4,13 @@ const Redis = require("ioredis");
 const { MongoClient, ObjectId } = require("mongodb");
 
 async function seed() {
+  // Neo4j
+  const driver = neo4j.driver(
+    process.env.NEO4J_URI,
+    neo4j.auth.basic(process.env.NEO4J_USER, process.env.NEO4J_PASSWORD)
+  );
+  const session = driver.session();
+  await session.run("MATCH (n) DETACH DELETE n");
 
   // Mongo
   const purchases = [
