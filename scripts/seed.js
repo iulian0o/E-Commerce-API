@@ -12,9 +12,9 @@ async function seed() {
   const session = driver.session();
 
   // Mongo
-  const P1 = "PASTE_P1_ID_HERE"   // Wireless Headphones_id
-  const P2 = "PASTE_P2_ID_HERE"   // Mechanical Keyboard_id
-  const P3 = "PASTE_P3_ID_HERE"   // Laptop Stand_id
+  const P1 = '69edd3b5823e614fa5b0987b'   // Wireless Headphones
+  const P2 = '69edd3b5823e614fa5b0987c'   // Mechanical Keyboard
+  const P3 = '69edd3b5823e614fa5b0987d'   // Laptop Stand_id
 
   await session.run("MATCH (n) DETACH DELETE n");
 
