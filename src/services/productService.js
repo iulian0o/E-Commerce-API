@@ -1,3 +1,4 @@
+const { recordPurchaseInGraph } = require("./recommendationService");
 const { getDb } = require("../config/mongo");
 const { getRedis } = require("../config/redis");
 const { ObjectId } = require("mongodb");
