@@ -18,7 +18,7 @@ async function start() {
   connectNeo4j();
   connectRedis();
   app.listen(process.env.PORT, () => {
-    console.log(` API running on port ${process.env.PORT}`);
+    console.log(`API running on port ${process.env.PORT}`);
   });
 }
 
