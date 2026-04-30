@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const { getSimilarProducts } = require("../services/vectorService");
+const { getSimilarProducts } = require("../services/vectoreServices");
 
 router.get("/:productId", async (req, res) => {
   try {
