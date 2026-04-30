@@ -18,7 +18,7 @@ function generateEmbedding(category, price) {
   return [categoryCode, subCode, normalizedPrice];
 }
 
-// Find products similar to a given productId using Atlas Vector Search
+// Find products similar to a given productId
 async function getSimilarProducts(productId) {
   const db = getDb();
 

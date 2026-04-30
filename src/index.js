@@ -12,6 +12,7 @@ app.use("/products", require("./routes/products"));
 app.use("/orders", require("./routes/orders"));
 app.use("/cart", require("./routes/cart"));
 app.use("/recommendations", require("./routes/recommendations"));
+app.use("/similar", require("./routes/vector"));
 
 async function start() {
   await connectMongo();
