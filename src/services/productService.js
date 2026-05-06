@@ -69,7 +69,7 @@ async function getRevenueByCategory() {
       { $unwind: "$productInfo" },
       {
         $group: {
-          _id: "$productInfo.category",
+          _id: "$productInfo.category", // Group by: $arrayElementAt
           totalRevenue: {
             $sum: { $multiply: ["$items.quantity", "$items.price"] },
           },

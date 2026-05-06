@@ -14,7 +14,7 @@ async function seed() {
   // Mongo
   const P1 = '69edd3b5823e614fa5b0987b'   // Wireless Headphones
   const P2 = '69edd3b5823e614fa5b0987c'   // Mechanical Keyboard
-  const P3 = '69edd3b5823e614fa5b0987d'   // Laptop Stand_id
+  const P3 = '69edd3b5823e614fa5b0987d'   // Laptop Stand
 
   await session.run("MATCH (n) DETACH DELETE n");
 
