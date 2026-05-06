@@ -4,8 +4,10 @@
   "description": "**Still in progress..**",
   "main": "index.js",
   "scripts": {
-    "run": "node src/index.js",
-    "dev": "node src/index.js"
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "seed": "node scripts/seed.js",
+    "embeddings": "node scripts/generateEmbeddings.js"
   },
   "repository": {
     "type": "git",
@@ -20,11 +22,12 @@
   },
   "homepage": "https://github.com/iulian0o/E-Commerce-API#readme",
   "dependencies": {
+    "dotenv": "^16.3.1",
     "express": "^5.2.1",
     "ioredis": "^5.10.1",
     "mongodb": "^7.2.0",
     "neo4j-driver": "^6.0.1",
     "nodemon": "^3.1.14",
-    "dotenv": "^16.3.1"
+    "openai": "^6.36.0"
   }
 }
