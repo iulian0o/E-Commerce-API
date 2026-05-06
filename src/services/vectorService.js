@@ -4,7 +4,6 @@ const { pipeline } = require("@xenova/transformers");
 
 let extractor = null;
 
-// Load model once and reuse
 async function getExtractor() {
   if (!extractor) {
     console.log("Loading embedding model...");
@@ -12,19 +11,17 @@ async function getExtractor() {
       "feature-extraction",
       "Xenova/all-MiniLM-L6-v2"
     );
-    console.log("✅ Embedding model loaded");
+    console.log("Embedding model loaded");
   }
   return extractor;
 }
 
-// Generate embedding from any text
 async function generateEmbeddingFromText(text) {
   const model = await getExtractor();
   const output = await model(text, { pooling: "mean", normalize: true });
   return Array.from(output.data);
 }
 
-// Find similar products by productId
 async function getSimilarProducts(productId) {
   const db = getDb();
 
@@ -67,7 +64,6 @@ async function getSimilarProducts(productId) {
   };
 }
 
-// Find similar products by image description — free local model
 async function getSimilarProductsByImage(imageDescription) {
   const db = getDb();
 
