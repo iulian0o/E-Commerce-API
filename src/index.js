@@ -8,6 +8,7 @@ const { connectRedis } = require("./config/redis");
 const app = express();
 
 app.use(express.json());
+app.use("/home", require("./routes/home"))
 app.use("/products", require("./routes/products"));
 app.use("/orders", require("./routes/orders"));
 app.use("/cart", require("./routes/cart"));
